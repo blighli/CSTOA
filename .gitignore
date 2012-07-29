@@ -1,4 +1,7 @@
 oa/target/**/*
+oa/.settings/*
+.classpath
+.project
 *~
 *.class
 
