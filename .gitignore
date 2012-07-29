@@ -1,3 +1,5 @@
+oa/target/**/*
+*~
 *.class
 
 # Package Files #
