@@ -5,7 +5,7 @@
   <artifactId>oa</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>oa Maven Webapp</name>
+  <name>ZJU CST OA System</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -17,5 +17,27 @@
   </dependencies>
   <build>
     <finalName>oa</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.cargo</groupId>
+        <artifactId>cargo-maven2-plugin</artifactId>
+        <configuration>
+          <!-- Container configuration -->
+          <container>
+            <containerId>tomcat7x</containerId>
+            <type>remote</type>
+          </container>
+          <!-- Configuration to use with the container -->
+          <configuration>
+            <type>runtime</type>
+            <properties>
+              <cargo.remote.username>admin</cargo.remote.username>
+              <cargo.remote.password>admin</cargo.remote.password>
+              <cargo.tomcat.manager.url>http://localhost:8080/manager</cargo.tomcat.manager.url>
+            </properties>
+          </configuration>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 </project>
