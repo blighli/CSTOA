@@ -1,5 +1,7 @@
 oa/target/**/*
 oa/.settings/*
+cstoa/target/**/*
+cstoa/.settings/*
 .classpath
 .project
 *~
